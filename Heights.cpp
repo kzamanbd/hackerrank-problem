@@ -6,33 +6,11 @@ int main()
 
     int n;
     cin >> n;
-    vector<int> heights(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> heights[i];
-    }
+    int heights[n], leftMax[n], rightMax[n];
 
     for (int i = 0; i < n; i++)
     {
-        // get before max
-        if (i == 0)
-        {
-            cout << "-1 ";
-        }
-        else
-        {
-            cout << *max_element(heights.begin(), heights.begin() + i) << " ";
-        }
-        // get after max
-        if (i == n - 1)
-        {
-            cout << "-1";
-        }
-        else
-        {
-            cout << *max_element(heights.begin() + i + 1, heights.end());
-        }
-        cout << endl;
+        cin >> heights[i];
     }
 
     return 0;
