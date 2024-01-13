@@ -14,7 +14,7 @@ public:
     }
 };
 
-class PeopleCompar
+class PeopleCompare
 {
 public:
     bool operator()(People p1, People p2)
@@ -36,7 +36,7 @@ int main()
 
     int testCase;
     cin >> testCase;
-    priority_queue<People, vector<People>, PeopleCompar> pq;
+    priority_queue<People, vector<People>, PeopleCompare> pq;
     while (testCase--)
     {
         string name;

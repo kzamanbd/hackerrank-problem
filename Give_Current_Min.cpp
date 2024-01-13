@@ -23,9 +23,9 @@ int main()
         cin >> action;
         if (action == 0)
         {
-            int a;
-            cin >> a;
-            pq.push(a);
+            int val;
+            cin >> val;
+            pq.push(val);
             cout << pq.top();
         }
         else if (action == 1)
@@ -42,14 +42,22 @@ int main()
 
         else if (action == 2)
         {
-            pq.pop();
+
             if (pq.empty())
             {
                 cout << "Empty";
             }
             else
             {
-                cout << pq.top();
+                pq.pop();
+                if (pq.empty())
+                {
+                    cout << "Empty";
+                }
+                else
+                {
+                    cout << pq.top();
+                }
             }
         }
 
