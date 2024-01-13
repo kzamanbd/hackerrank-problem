@@ -22,18 +22,6 @@ public:
     }
 };
 
-void printTop(priority_queue<Student, vector<Student>, StudentCompare> pq)
-{
-    if (pq.empty())
-    {
-        cout << "Empty";
-    }
-    else
-    {
-        cout << pq.top().name << " " << pq.top().roll << " " << pq.top().marks;
-    }
-}
-
 int main()
 {
 
@@ -60,11 +48,25 @@ int main()
             Student sObj;
             cin >> sObj.name >> sObj.roll >> sObj.marks;
             pq.push(sObj);
-            printTop(pq);
+            if (pq.empty())
+            {
+                cout << "Empty";
+            }
+            else
+            {
+                cout << pq.top().name << " " << pq.top().roll << " " << pq.top().marks;
+            }
         }
         else if (action == 1)
         {
-            printTop(pq);
+            if (pq.empty())
+            {
+                cout << "Empty";
+            }
+            else
+            {
+                cout << pq.top().name << " " << pq.top().roll << " " << pq.top().marks;
+            }
         }
 
         else if (action == 2)
@@ -76,7 +78,14 @@ int main()
             else
             {
                 pq.pop();
-                printTop(pq);
+                if (pq.empty())
+                {
+                    cout << "Empty";
+                }
+                else
+                {
+                    cout << pq.top().name << " " << pq.top().roll << " " << pq.top().marks;
+                }
             }
         }
 
